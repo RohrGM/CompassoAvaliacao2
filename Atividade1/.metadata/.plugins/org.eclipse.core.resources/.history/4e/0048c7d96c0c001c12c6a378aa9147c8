@@ -1,0 +1,36 @@
+package com.compasso.carros.controller.dto;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.compasso.carros.modelo.Carro;
+
+public class CarroDto {
+	
+	private String nome;
+	private String marca;
+	private String cor;
+	private BigDecimal valor;
+	private int ano;
+	
+	public CarroDto(String nome, String marca, String cor, BigDecimal valor, int ano) {
+		this.nome = nome;
+		this.marca = marca;
+		this.cor = cor;
+		this.valor = valor;
+		this.ano = ano;
+	}
+
+	public static List<CarroDto> converter (List<Carro> carros){
+		return carros.stream().map(CarroDto::new).collect(Collectors.toList());
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	
+	
+
+}

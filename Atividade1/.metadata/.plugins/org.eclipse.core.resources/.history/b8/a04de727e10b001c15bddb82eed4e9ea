@@ -1,0 +1,1 @@
+INSERT INTO carro(chassi, nome) VALUES('9BBNSZPPA288003333', 'New Fiesta');

@@ -1,0 +1,11 @@
+package com.compasso.carros;
+
+public class Ordem {
+	
+	public enum Ordem{
+		NOME,
+		VALOR,
+		ANO;		
+	}
+
+}

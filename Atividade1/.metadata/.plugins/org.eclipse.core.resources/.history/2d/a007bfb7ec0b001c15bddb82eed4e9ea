@@ -1,0 +1,27 @@
+package com.compasso.carros.controller.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.compasso.carros.modelo.Carro;
+
+public class CarroDto {
+	
+	private String chassi;
+	private String nome;
+	
+	public static List<CarroDto> converter (List<Carro> carros){
+		return carros.stream().map(CarroDto::new).collect(Collectors.toList());
+	}
+	
+	public String getChassi() {
+		return chassi;
+	}
+	public String getNome() {
+		return nome;
+	}
+	
+	
+	
+
+}

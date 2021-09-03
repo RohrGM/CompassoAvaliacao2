@@ -1,0 +1,5 @@
+package com.compasso.carros.controller.dto;
+
+public class CarroDto {
+
+}

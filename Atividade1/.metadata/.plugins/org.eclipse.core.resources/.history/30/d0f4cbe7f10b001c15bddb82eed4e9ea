@@ -1,0 +1,23 @@
+package com.compasso.carros.controller.form;
+
+import java.math.BigDecimal;
+
+import com.compasso.carros.modelo.Carro;
+import com.compasso.carros.repository.CarroRepository;
+
+public class CarroForm {
+	
+	private String chassi;
+	private String nome;
+	private String marca;
+	private String cor;
+	private BigDecimal valor;
+	private int ano;
+	
+	public Carro converter(CarroRepository repository) {
+		return new Carro(repository.getChassi());
+	}
+	
+	
+
+}

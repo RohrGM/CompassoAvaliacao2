@@ -1,0 +1,5 @@
+INSERT INTO carro VALUES('9BBNSZPPA288003333', 2015, 'branca', 'ford', 'fiesta', 20000);
+INSERT INTO carro VALUES('9BBNSZPPA288003334', 2015, 'branca', 'ford', 'fiesta1', 20000);
+INSERT INTO carro VALUES('9BBNSZPPA288003335', 2015, 'branca', 'ford', 'fiesta2', 20000);
+INSERT INTO carro VALUES('9BBNSZPPA288003336', 2015, 'branca', 'ford', 'fiesta3', 20000);
+INSERT INTO carro VALUES('9BBNSZPPA288003337', 2015, 'branca', 'ford', 'fiesta4', 20000);

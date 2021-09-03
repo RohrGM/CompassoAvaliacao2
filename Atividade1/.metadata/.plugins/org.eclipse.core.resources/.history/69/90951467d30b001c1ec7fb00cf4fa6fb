@@ -1,0 +1,25 @@
+package com.compasso.carros.controller.dto;
+
+import com.compasso.carros.modelo.Carro;
+
+public class CarroDto {
+	
+	private String chassi;
+	private String nome;
+	
+	public CarroDto(Carro carro) {
+		this.chassi = carro.getChassi();
+		this.nome = carro.getNome();
+	}
+	
+	public String getChassi() {
+		return chassi;
+	}
+	public String getNome() {
+		return nome;
+	}
+	
+	
+	
+
+}
