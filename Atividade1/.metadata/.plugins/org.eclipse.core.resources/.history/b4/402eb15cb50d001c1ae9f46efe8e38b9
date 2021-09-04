@@ -1,0 +1,38 @@
+ package com.compasso.carros.controller.form;
+
+import org.springframework.data.jpa.domain.Specification;
+
+import com.compasso.carros.modelo.Carro;
+
+public class BuscaCarroForm {
+	
+	private String nome;
+	private String marca;
+	private String cor;
+	
+	public BuscaCarroForm(Carro carro) {
+		this.nome = carro.getNome();
+		this.marca = carro.getMarca();
+		this.cor = carro.getCor();
+	}
+	
+	public Specification<Carro> toSpec() {
+		return (root, query, builder) -> {
+			if(org.springframework.util.StringUtils.hasText(nome))
+			return builder.and(null)
+		};
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	
+	
+
+}

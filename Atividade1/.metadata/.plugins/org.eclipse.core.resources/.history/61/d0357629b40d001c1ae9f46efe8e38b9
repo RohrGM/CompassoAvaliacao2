@@ -1,0 +1,5 @@
+package com.compasso.carros.controller.form;
+
+public class BuscaCarroForm {
+
+}

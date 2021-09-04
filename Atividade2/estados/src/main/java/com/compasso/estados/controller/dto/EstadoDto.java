@@ -44,7 +44,5 @@ public class EstadoDto {
 
 	public String getCapital() {
 		return capital;
-	}
-
-	
+	}	
 }

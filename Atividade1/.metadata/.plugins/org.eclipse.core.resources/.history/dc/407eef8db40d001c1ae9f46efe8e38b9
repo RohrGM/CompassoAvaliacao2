@@ -1,0 +1,11 @@
+ package com.compasso.carros.controller.form;
+
+public class BuscaCarroForm {
+	
+	private String nome;
+	private String marca;
+	private String cor;
+	
+	
+
+}

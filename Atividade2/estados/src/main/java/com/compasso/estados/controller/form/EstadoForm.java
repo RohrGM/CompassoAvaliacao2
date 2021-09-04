@@ -1,8 +1,6 @@
 package com.compasso.estados.controller.form;
 
 import javax.validation.constraints.NotBlank;
-
-import org.hibernate.annotations.NotFound;
 import com.compasso.estados.modelo.Estado;
 import com.compasso.estados.modelo.EstadoRegiao;
 
