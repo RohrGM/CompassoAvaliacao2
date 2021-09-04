@@ -26,8 +26,6 @@ public class Carro implements Comparable<Carro> {
 		this.ano = ano;
 	}
 	
-	
-	
 	public Carro() {}
 	
 	public String getChassi() {

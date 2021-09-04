@@ -45,8 +45,4 @@ public class CarroDto {
 	public int getAno() {
 		return ano;
 	}
-
-	
-	
-
 }
