@@ -2,7 +2,7 @@ package com.compasso.estados.controller.form;
 
 import javax.validation.constraints.NotBlank;
 import com.compasso.estados.modelo.Estado;
-import com.compasso.estados.modelo.EstadoRegiao;
+import com.compasso.estados.validacao.constraints.RegiaoValida;
 
 public class EstadoForm {
 	
@@ -10,7 +10,8 @@ public class EstadoForm {
 	private double area;
 	@NotBlank
 	private String nome;
-	private EstadoRegiao regiao;
+	@RegiaoValida
+	private String regiao;
 	private String capital;
 
 	public void setPopulacao(long populacao) {
@@ -22,7 +23,7 @@ public class EstadoForm {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setRegiao(EstadoRegiao regiao) {
+	public void setRegiao(String regiao) {
 		this.regiao = regiao;
 	}
 	public void setCapital(String capital) {

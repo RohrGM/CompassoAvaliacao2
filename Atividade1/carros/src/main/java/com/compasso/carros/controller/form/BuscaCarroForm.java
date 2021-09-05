@@ -16,9 +16,7 @@ public class BuscaCarroForm {
 	private String nome;
 	private String marca;
 	private String cor;
-	
 
-	
 	public BuscaCarroForm(String nome, String marca, String cor) {
 		this.nome = nome;
 		this.marca = marca;
@@ -56,7 +54,4 @@ public class BuscaCarroForm {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
-	
-	
-
 }

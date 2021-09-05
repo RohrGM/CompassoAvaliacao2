@@ -1,12 +1,11 @@
 package com.compasso.estados.controller;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
-
+import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 import com.compasso.estados.controller.dto.EstadoDto;
 import com.compasso.estados.controller.form.AtualizaEstadoForm;
+import com.compasso.estados.controller.form.BuscaEstadoForm;
 import com.compasso.estados.controller.form.EstadoForm;
 import com.compasso.estados.modelo.Estado;
 import com.compasso.estados.repository.EstadoRepository;
@@ -34,39 +34,11 @@ public class EstadoController {
 	
 	
 	@GetMapping
-	public List<EstadoDto> lista(){
+	public List<EstadoDto> lista(@Valid BuscaEstadoForm form, Pageable pageable){
+		List<Estado> estados = estadoRepository.findAll(form.toSpec(),pageable).getContent();
 		
-		List<Estado> estados = estadoRepository.findAll(); 
-
 		return EstadoDto.converter(estados);
 	}
-	
-	@GetMapping(path="/regiao")
-	public List<EstadoDto> listaNome(String regiao){
-		
-		List<Estado> estados = estadoRepository.findByRegiao(regiao); 
-
-		return EstadoDto.converter(estados);
-	}
-	
-	@GetMapping(path="/populacao")
-	public List<EstadoDto> listaPopulacao(){
-		
-		List<Estado> estados = estadoRepository.findAll(); 
-		estados.sort(Comparator.comparing(Estado::getPopulacao));
-
-		return EstadoDto.converter(estados);
-	}
-	
-	@GetMapping(path="/area")
-	public List<EstadoDto> listaArea(){
-		
-		List<Estado> estados = estadoRepository.findAll(); 
-		estados.sort(Comparator.comparing(Estado::getArea));
-
-		return EstadoDto.converter(estados);
-	}
-	
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<EstadoDto> detalhar(@PathVariable Long id) {
@@ -90,10 +62,10 @@ public class EstadoController {
 		}
 		
 		return ResponseEntity.notFound().build();
-
+		
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/{id}") 
 	public ResponseEntity<?> remover(@PathVariable Long id) {
 		
 		Optional<Estado> optional = Optional.ofNullable(estadoRepository.findById(id));

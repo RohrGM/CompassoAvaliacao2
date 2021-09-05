@@ -12,11 +12,4 @@ import com.compasso.carros.modelo.Carro;
 public interface CarroRepository extends PagingAndSortingRepository<Carro, String>, JpaSpecificationExecutor<Carro> {
 	
 	Collection<Carro> findAll();
-
-	List<Carro> findByNome(String nomeCarro);
-
-	List<Carro> findByMarca(String marca);
-
-	List<Carro> findByCor(String cor);
-
 }

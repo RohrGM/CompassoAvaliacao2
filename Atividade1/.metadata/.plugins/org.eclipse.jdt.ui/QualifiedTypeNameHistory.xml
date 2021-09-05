@@ -8,8 +8,6 @@
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="com.compasso.carros.modelo.Carro"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
     <fullyQualifiedTypeName name="com.compasso.carros.controller.form.CarroForm"/>
@@ -24,7 +22,6 @@
     <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="com.compasso.carros.controller.dto.CarroDto"/>
     <fullyQualifiedTypeName name="com.sun.xml.bind.v2.runtime.RuntimeUtil.ToStringAdapter"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -36,4 +33,28 @@
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.PagingAndSortingRepository"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="org.h2.mvstore.Page"/>
+    <fullyQualifiedTypeName name="org.h2.pagestore.Page"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.debugger.Page"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+    <fullyQualifiedTypeName name="com.compasso.carros.controller.dto.CarroDto"/>
+    <fullyQualifiedTypeName name="java.awt.print.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaSpecificationExecutor"/>
+    <fullyQualifiedTypeName name="com.compasso.carros.modelo.Carro"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.Specification"/>
+    <fullyQualifiedTypeName name="antlr.StringUtils"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.StringUtils"/>
+    <fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+    <fullyQualifiedTypeName name="java.nio.file.Path"/>
+    <fullyQualifiedTypeName name="javax.validation.Path"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.JpaSort.Path"/>
+    <fullyQualifiedTypeName name="javax.persistence.criteria.Path"/>
+    <fullyQualifiedTypeName name="javax.persistence.criteria.Predicate"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.validation.ConstraintValidator"/>
 </qualifiedTypeNameHistroy>

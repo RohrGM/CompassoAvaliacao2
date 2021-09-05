@@ -3,14 +3,13 @@ package com.compasso.estados.controller.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.compasso.estados.modelo.Estado;
-import com.compasso.estados.modelo.EstadoRegiao;
 
 public class EstadoDto {
 	
 	private long populacao;
 	private double area;
 	private String nome;
-	private EstadoRegiao regiao;
+	private String regiao;
 	private String capital;
 	
 	
@@ -38,7 +37,7 @@ public class EstadoDto {
 		return nome;
 	}
 
-	public EstadoRegiao getRegiao() {
+	public String getRegiao() {
 		return regiao;
 	}
 

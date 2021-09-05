@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.compasso.estados.validacao.constraints.RegiaoValida;
+
 @Entity
 public class Estado implements Comparable<Estado>{
 	
@@ -16,11 +18,10 @@ public class Estado implements Comparable<Estado>{
 	private long populacao;
 	private double area;
 	private String nome;
-	@Enumerated(EnumType.STRING)
-	private EstadoRegiao regiao;
+	private String regiao;
 	private String capital;
 	
-	public Estado(long populacao, double area, String nome, EstadoRegiao regiao, String capital) {
+	public Estado(long populacao, double area, String nome, String regiao, String capital) {
 		this.populacao = populacao;
 		this.area = area;
 		this.nome = nome;
@@ -53,10 +54,10 @@ public class Estado implements Comparable<Estado>{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public EstadoRegiao getRegiao() {
+	public String getRegiao() {
 		return regiao;
 	}
-	public void setRegiao(EstadoRegiao regiao) {
+	public void setRegiao(String regiao) {
 		this.regiao = regiao;
 	}
 	public String getCapital() {

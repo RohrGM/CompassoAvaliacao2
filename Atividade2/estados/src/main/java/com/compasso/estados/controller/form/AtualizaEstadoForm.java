@@ -11,6 +11,7 @@ public class AtualizaEstadoForm {
 	private long populacao;
 	@NotNull
 	private double area;	
+	
 	public long getPopulacao() {
 		return populacao;
 	}
