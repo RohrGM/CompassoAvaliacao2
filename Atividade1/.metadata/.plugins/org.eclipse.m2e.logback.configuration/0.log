@@ -1385,3 +1385,4 @@
 2021-09-05 06:00:35,462 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-09-05 06:00:35,462 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-09-05 06:00:35,462 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Users\Rohr\Documents\GitHub\CompassoAvaliacao2\Atividade1\carros\src\test\resources
+2021-09-05 16:37:10,079 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

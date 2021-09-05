@@ -88,7 +88,7 @@ public class EstadoController {
 		Estado estado = estadoForm.converter(estadoForm);
 		estadoRepository.save(estado);
 		
-		URI uri = uriBuilder.path("/api/cars/{id}").buildAndExpand(estado.getId()).toUri();
+		URI uri = uriBuilder.path("/api/states/{id}").buildAndExpand(estado.getId()).toUri();
 		
 		return ResponseEntity.created(uri).body(new EstadoDto(estado));
 	}
