@@ -1,0 +1,275 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Avaliação 2",
+    "description": "Atividade2 - Cadastro e consulta de estados com spring",
+    "version": "0.0.1",
+    "termsOfService": "https://mockapi.io"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/api/states": {
+      "get": {
+        "summary": "Retorna todas as entidades cadastradas com ou sem filtro",
+        "parameters": [
+          {
+            "name": "regiao",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstadoDto"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Não encontrado",
+            "content": {
+              "aplication/json": {
+                "example": "Not Found"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova entidade",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "$ref": "#/components/schemas/EstadoForm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/EstadoDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inseridos invalidos"
+          }
+        }
+      }
+    },
+    "/api/states/{id}": {
+      "get": {
+        "summary": "Retorna uma entidade pelo id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/EstadoDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Não encontrado",
+            "content": {
+              "aplication/json": {
+                "example": "Not Found"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza uma entidade pelo id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          },
+          {
+            "name": "atualiza",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "$ref": "#/components/schemas/AtualizaEstadoForm"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Entidade alterada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/EstadoDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Não encontrado",
+            "content": {
+              "aplication/json": {
+                "example": "Not Found"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deleta uma entidade pelo id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Entidade"
+          },
+          "404": {
+            "description": "Não encontrado",
+            "content": {
+              "aplication/json": {
+                "example": "Not Found"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "EstadoDto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "regiao": {
+            "type": "string"
+          },
+          "capital": {
+            "type": "string"
+          },
+          "populacao": {
+            "type": "integer"
+          },
+          "area": {
+            "type": "number"
+          }
+        }
+      },
+      "EstadoForm": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "regiao": {
+            "type": "string"
+          },
+          "capital": {
+            "type": "string"
+          },
+          "populacao": {
+            "type": "integer"
+          },
+          "area": {
+            "type": "number"
+          }
+        }
+      },
+      "BuscaEstadoForm": {
+        "type": "object",
+        "properties": {
+          "regiao": {
+            "type": "string"
+          }
+        }
+      },
+      "AtualizaEstadoForm": {
+        "type": "object",
+        "properties": {
+          "populacao": {
+            "type": "integer"
+          },
+          "area": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

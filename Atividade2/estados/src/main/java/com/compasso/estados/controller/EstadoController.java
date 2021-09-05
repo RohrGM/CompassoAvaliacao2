@@ -34,10 +34,14 @@ public class EstadoController {
 	
 	
 	@GetMapping
-	public List<EstadoDto> lista(@Valid BuscaEstadoForm form, Pageable pageable){
+	public ResponseEntity<?> lista(@Valid BuscaEstadoForm form, Pageable pageable){
 		List<Estado> estados = estadoRepository.findAll(form.toSpec(),pageable).getContent();
 		
-		return EstadoDto.converter(estados);
+		if(estados.size() > 0) {
+			return ResponseEntity.ok(EstadoDto.converter(estados));
+		}
+
+		return ResponseEntity.notFound().build();	
 	}
 	
 	@GetMapping("/{id}")
@@ -66,6 +70,7 @@ public class EstadoController {
 	}
 	
 	@DeleteMapping("/{id}") 
+	@Transactional
 	public ResponseEntity<?> remover(@PathVariable Long id) {
 		
 		Optional<Estado> optional = Optional.ofNullable(estadoRepository.findById(id));

@@ -30,10 +30,13 @@ public class CarroController {
 	private CarroRepository carroRepository;	
 	
 	@GetMapping
-	public List<CarroDto> lista(BuscaCarroForm form, Pageable pageable){
+	public ResponseEntity<?> lista(BuscaCarroForm form, Pageable pageable){
 
 		List<Carro> carros = carroRepository.findAll(form.toSpec(),pageable).getContent();
-		return CarroDto.converter(carros);
+		if(carros.size()> 0) {
+			return ResponseEntity.ok(CarroDto.converter(carros));	
+		}
+		return ResponseEntity.notFound().build();
 	}
 	
 	@PostMapping
