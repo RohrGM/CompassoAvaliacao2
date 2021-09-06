@@ -98,13 +98,13 @@ Exemplo de get utilizando o parâmetro de região opcional:
 
     http://localhost:8080/api/states?regiao=sul
 
-Exemplo de get retornando estados com maior população:
+Exemplo de get retornando os 3 estados com maior população:
 
-    http://localhost:8080/api/states?sort=populacao,desc
+    http://localhost:8080/api/states?size=3&sort=populacao,desc
 
-Exemplo de get retornando estados com maior área:
+Exemplo de get retornando os 3 estados com maior área:
 
-    http://localhost:8080/api/states?sort=area,desc
+    http://localhost:8080/api/states?size=3&sort=area,desc
 
 Exemplo de get e delete por id:
 
