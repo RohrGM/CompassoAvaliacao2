@@ -82,7 +82,7 @@ Exemplo de post:
             - populacao
             - area
 
-    - ## Delete /{id}:
+    - ## delete /{id}:
         - Deleta estado por id
     
     - ## post:
