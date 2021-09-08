@@ -110,7 +110,7 @@ Exemplo de get e delete por id:
 
     http://localhost:8080/api/states/1
 
-exemplo de put por id:
+Exemplo de put por id:
 
     http://localhost:8080/api/states/2?populacao=30000&area=55000.50
 
